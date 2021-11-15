@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Seo from "../components/utilities/Seo"
 
 const PostTemplate = ({ data }) => {
   const {
@@ -20,9 +21,22 @@ const PostTemplate = ({ data }) => {
 
   return (
     <>
+      <Seo title={title} description={description} image={image} tags={tags} />
       <section>
-        post template
-        <MDXRenderer>{body}</MDXRenderer>
+        <aside>
+          <h1>{title}</h1>
+          <p>{category}</p>
+          <ul>
+            {tags?.map((tag, index) => {
+              return <li key={index}>{tag}</li>
+            })}
+          </ul>
+          <p>{date}</p>
+        </aside>
+
+        <article>
+          <MDXRenderer embeddedImages={embeddedImages}>{body}</MDXRenderer>
+        </article>
       </section>
     </>
   )
