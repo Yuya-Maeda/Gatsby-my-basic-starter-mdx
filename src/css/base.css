@@ -1,0 +1,124 @@
+:root {
+  /* color*/
+  --color-1: hsl(18, 81%, 60%);
+  --color-2: hsl(32, 91%, 82%);
+  --color-3: hsl(31, 92%, 64%);
+  --color-4: hsl(6, 36%, 42%);
+  --color-5: hsl(3, 40%, 27%);
+  --color-6: hsl(67, 100%, 23%);
+
+  --font-color-light: hsl(23, 61%, 89%);
+  --font-color-grey: hsl(0, 0%, 40%);
+  --font-color-dark: hsl(18, 92%, 9%);
+
+  --bg-color-1: rgb(242, 230, 214);
+
+  /* mdx-text-box color */
+
+  /* font color */
+
+  /* Utility */
+  --color-white: #fff;
+  --font-famiry-1: "Roboto", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.2rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 700px;
+}
+
+/*
+  =============== 
+  Grobal Styles
+  ===============
+  */
+
+body {
+  background: antiquewhite;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-3);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+.btn {
+  background-color: var(--color-5);
+  color: var(--color-2);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 400;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+.btn:hover {
+  background-color: var(--color-4);
+  color: var(--color-white);
+}
+.btn:active {
+  transform: translateY(4px) scale(90%);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+}
+.center-btn {
+  display: block;
+  width: 12rem;
+  text-align: center;
+  margin: 3rem auto;
+}
